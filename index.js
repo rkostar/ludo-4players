@@ -444,7 +444,10 @@ dice.addEventListener("click", func = () => {
       }
       if (ifCanMoveRed != 1)
         return;
-
+      
+      if(diceVal==6){
+        toggler=1
+      }
       currPos = redstack.pop();
       document.getElementById("id" + currPos).innerHTML = "";
       let newPos = graph[currPos][diceVal - 1];
@@ -514,7 +517,9 @@ dice.addEventListener("click", func = () => {
       }
       if (ifCanMoveGreen != 1)
         return;
-
+      if(diceVal==6){
+        toggler=2
+      }
       currPos = greenstack.pop();
       document.getElementById("id" + currPos).innerHTML = "";
       let newPos = graph[currPos][diceVal - 1];
@@ -582,7 +587,9 @@ dice.addEventListener("click", func = () => {
       }
       if (ifCanMoveYellow != 1)
         return;
-
+      if(diceVal==6){
+        toggler=3
+      }
       currPos = yellowstack.pop();
       document.getElementById("id" + currPos).innerHTML = "";
       let newPos = graph[currPos][diceVal - 1];
@@ -650,7 +657,9 @@ dice.addEventListener("click", func = () => {
       }
       if (ifCanMoveBlue != 1)
         return;
-
+      if(diceVal==6){
+        toggler=4
+      }
       currPos = bluestack.pop();
       document.getElementById("id" + currPos).innerHTML = "";
       let newPos = graph[currPos][diceVal - 1];
