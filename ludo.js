@@ -422,8 +422,8 @@ dice.addEventListener("click", func = () => {
       if (newPos == 130) {
         dice.removeEventListener("click", func)
         dice.innerHTML = "Red wins"
-        y=window.scrollY + document.getElementById(id).getBoundingClientRect().top // Y
-        x=window.scrollX + document.getElementById(id).getBoundingClientRect().left // X
+        y=window.scrollY + document.getElementById("dice").getBoundingClientRect().top // Y
+        x=window.scrollX + document.getElementById("dice").getBoundingClientRect().left // X
         var reddana= document.getElementById("reddana")
         reddana.style.position='absolute';
         reddana.style.left=x+"px";
@@ -512,8 +512,8 @@ dice.addEventListener("click", func = () => {
       if (newPos == 130) {
         dice.removeEventListener("click", func)
         dice.innerHTML = "Green wins"
-        y=window.scrollY + document.getElementById(id).getBoundingClientRect().top // Y
-        x=window.scrollX + document.getElementById(id).getBoundingClientRect().left // X
+        y=window.scrollY + document.getElementById("dice").getBoundingClientRect().top // Y
+        x=window.scrollX + document.getElementById("dice").getBoundingClientRect().left // X
         var greendana= document.getElementById("greendana")
         greendana.style.position='absolute';
         greendana.style.left=x+"px";
@@ -600,8 +600,8 @@ dice.addEventListener("click", func = () => {
       if (newPos == 130) {
         dice.removeEventListener("click", func)
         dice.innerHTML = "Yellow wins"
-        y=window.scrollY + document.getElementById(id).getBoundingClientRect().top // Y
-        x=window.scrollX + document.getElementById(id).getBoundingClientRect().left // X
+        y=window.scrollY + document.getElementById("dice").getBoundingClientRect().top // Y
+        x=window.scrollX + document.getElementById("dice").getBoundingClientRect().left // X
         var yellowdana= document.getElementById("yellowdana")
         yellowdana.style.position='absolute';
         yellowdana.style.left=x+"px";
@@ -687,8 +687,8 @@ dice.addEventListener("click", func = () => {
       if (newPos == 130) {
         dice.removeEventListener("click", func)
         dice.innerHTML = "Blue wins"
-        y=window.scrollY + document.getElementById(id).getBoundingClientRect().top // Y
-        x=window.scrollX + document.getElementById(id).getBoundingClientRect().left // X
+        y=window.scrollY + document.getElementById("dice").getBoundingClientRect().top // Y
+        x=window.scrollX + document.getElementById("dice").getBoundingClientRect().left // X
         var bluedana= document.getElementById("bluedana")
         bluedana.style.position='absolute';
         bluedana.style.left=x+"px";
