@@ -1,5 +1,7 @@
 const display = document.getElementById("display");
 
+
+
 const yc1 = document.getElementById("yellow-circle-1");
 const yc2 = document.getElementById("yellow-circle-2");
 const yc3 = document.getElementById("yellow-circle-3");
