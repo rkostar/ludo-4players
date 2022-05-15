@@ -278,12 +278,29 @@ var yellowCounter = 0
 var blueCounter = 0
 var greenCounter = 0
 display.innerHTML = "Red roll the dice!!"
+
+dice.innerHTML=`<img style="width:50%; height: 50%;" src='assets/dice/dice-${1}.png' alt="">`
+
 dice.addEventListener("click", func = () => {
+  let j=0
+  var cleartime = setInterval(() => {
+    j += 1;
+  
+    html = `<img style="width:60%; height: 60%;" src='assets/dice/dice-${j}.png' alt="">`
+    dice.innerHTML = html
+  
+  
+    if (j == 6) {
+      clearInterval(cleartime)
+    }
+  }, 100)
 
   let diceVal = Math.floor(Math.random() * 6 + 1);
   setTimeout(() => {
-    dice.innerHTML = diceVal;
-  }, 700)
+    // let val = Math.floor((Math.random() * 6) + 1)
+    dice.innerHTML = `<img style="width:50%; height: 50%;" src='assets/dice/dice-${diceVal}.png' alt="">`
+    console.log("f")
+  }, 600)
 
 
   switch (toggler) {
@@ -444,9 +461,9 @@ dice.addEventListener("click", func = () => {
       }
       if (ifCanMoveRed != 1)
         return;
-      
-      if(diceVal==6){
-        toggler=1
+
+      if (diceVal == 6) {
+        toggler = 1
       }
       currPos = redstack.pop();
       document.getElementById("id" + currPos).innerHTML = "";
@@ -517,8 +534,8 @@ dice.addEventListener("click", func = () => {
       }
       if (ifCanMoveGreen != 1)
         return;
-      if(diceVal==6){
-        toggler=2
+      if (diceVal == 6) {
+        toggler = 2
       }
       currPos = greenstack.pop();
       document.getElementById("id" + currPos).innerHTML = "";
@@ -587,8 +604,8 @@ dice.addEventListener("click", func = () => {
       }
       if (ifCanMoveYellow != 1)
         return;
-      if(diceVal==6){
-        toggler=3
+      if (diceVal == 6) {
+        toggler = 3
       }
       currPos = yellowstack.pop();
       document.getElementById("id" + currPos).innerHTML = "";
@@ -657,8 +674,8 @@ dice.addEventListener("click", func = () => {
       }
       if (ifCanMoveBlue != 1)
         return;
-      if(diceVal==6){
-        toggler=4
+      if (diceVal == 6) {
+        toggler = 4
       }
       currPos = bluestack.pop();
       document.getElementById("id" + currPos).innerHTML = "";
@@ -708,5 +725,5 @@ dice.addEventListener("click", func = () => {
         bluestack.push(newPos);
       }
     }
-  }, 700)
+  }, 600)
 });
